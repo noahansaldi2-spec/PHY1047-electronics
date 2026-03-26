@@ -17,8 +17,8 @@ MAX30105 particleSensor;
 
 //Arduino Uno doesn't have enough SRAM to store 80 samples of IR led data and red led data in 32-bit format
 //To solve this problem, 16-bit MSB of the sampled data will be truncated. Samples become 16-bit data.
-uint16_t irBuffer[100]; //infrared LED sensor data
-uint16_t redBuffer[100];  //red LED sensor data
+uint32_t irBuffer[100]; //infrared LED sensor data
+uint32_t redBuffer[100];  //red LED sensor data
 
 int32_t bufferLength; //data length
 int32_t spo2; //SPO2 value
